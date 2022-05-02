@@ -1,3 +1,9 @@
+:root {
+  --blue: #60A5FA;
+  /* --lightblue: #BFDBFE; */
+  --extralight: #DBEAFE;
+}
+
 @font-face {
   font-family: Roboto;
   src: url(./fonts/Roboto-Regular.ttf);
@@ -17,12 +23,13 @@ body {
 img {
   height: 30px;
   width: 30px;
-  background-color: red;
 }
+ 
 
 .container {
   display: grid;
   grid-template-columns: 1fr 4fr;
+  min-height: 100vh;
 }
 
 
@@ -31,9 +38,15 @@ img {
   grid-row: 1 / 3;
   display: grid;
   grid-template-rows: 1fr 4fr 8fr;
-  /* padding: 1em; */
-  background-color: rgb(0, 149, 255);
+  background-color: var(--blue);
   color: white;
+}
+
+.sidebar img {
+  filter: 
+    invert(100%) sepia(100%) 
+    saturate(20%) hue-rotate(325deg) 
+    brightness(104%) contrast(106%);
 }
 
 .sidebar ul {
@@ -70,7 +83,6 @@ img {
   display: flex;
   align-items: center;
   gap: 10px;
-  /* grid-template-columns: 1fr 16fr; */
 }
 
 .buttons {
@@ -83,7 +95,7 @@ img {
 .buttons button {
   font-size: 1.4rem;
   padding: 0.9rem 2.7rem;
-  background-color: #0095FF;
+  background-color: var(--blue);
   color: white;
   border: none;
   border-radius: 1.5em;
@@ -98,7 +110,7 @@ img {
 .search input {
   width: 700px;
   height: 25px;
-  background-color: rgb(187, 228, 255);
+  background-color: var(--extralight);
   border: none;
   border-radius: 1em;
   padding: 15px;
@@ -119,5 +131,95 @@ img {
 
 
 .main-content {
-  background-color: violet;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  background-color: var(--extralight);
 }
+
+.projects {
+  padding: 2rem;
+  grid-row: 1 / 3;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  padding-top: 1rem;
+}
+
+.card {
+  display: grid;
+  gap: 1em;
+  padding: 30px;
+  background-color: white;
+  border-radius: 0.7rem;
+  border-left: 5px solid rgb(247, 194, 81);
+  box-shadow: 6px 6px 5px lightgray;
+}
+
+.card > span {
+  justify-self: end;
+  display: flex;
+  gap: 2rem;
+}
+
+
+.announcements {
+  padding: 2rem;
+}
+
+.announcements > div {
+  padding-top: 1rem;
+}
+
+.announcement-cards {
+  display: grid;
+  gap: 2em;
+  background-color: white;
+  padding: 30px;
+  border-radius: 0.7em;
+  box-shadow: 6px 6px 5px lightgray;
+}
+
+
+.announcement-cards div:nth-child(2) {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgrey;
+}
+
+.announcement-cards div p {
+  word-break: break-all;
+  white-space: normal;
+}
+
+
+.trending {
+  padding: 0 2rem;
+}
+
+.trending > div {
+  padding-top: 1rem;
+}
+
+.trending-accounts {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 1em;
+  padding: 2em;
+  gap: 1rem;
+  box-shadow: 6px 6px 5px lightgray;
+}
+
+.trending-accounts > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.lightgray {
+  color: rgb(133, 133, 133);
+}
+
+

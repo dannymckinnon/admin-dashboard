@@ -134,6 +134,7 @@ img {
   display: grid;
   grid-template-columns: 3fr 1fr;
   background-color: var(--extralight);
+  box-shadow: 0px -4px 5px lightgray;
 }
 
 .projects {
@@ -156,6 +157,11 @@ img {
   border-radius: 0.7rem;
   border-left: 5px solid rgb(247, 194, 81);
   box-shadow: 6px 6px 5px lightgray;
+}
+
+.card > p {
+  padding-right: 120px;
+  padding-bottom: 60px;
 }
 
 .card > span {
@@ -188,10 +194,21 @@ img {
   border-bottom: 1px solid lightgrey;
 }
 
+.announcement-cards > div {
+  padding: 0.5rem;
+}
+
+.announcement-cards > div:nth-child(2) {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
 .announcement-cards div p {
   word-break: break-all;
   white-space: normal;
+  padding: 0.4em 0;
 }
+
 
 
 .trending {

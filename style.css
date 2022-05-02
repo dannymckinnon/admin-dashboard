@@ -25,6 +25,9 @@ img {
   width: 30px;
 }
  
+.lightgray {
+  color: rgb(133, 133, 133);
+}
 
 .container {
   display: grid;
@@ -173,6 +176,7 @@ img {
 
 .announcements {
   padding: 2rem;
+  padding-bottom: 0;
 }
 
 .announcements > div {
@@ -212,7 +216,8 @@ img {
 
 
 .trending {
-  padding: 0 2rem;
+  padding: 2rem;
+  padding-top: 0;
 }
 
 .trending > div {
@@ -235,8 +240,6 @@ img {
   gap: 0.5em;
 }
 
-.lightgray {
-  color: rgb(133, 133, 133);
-}
+
 
 
